@@ -1,0 +1,11 @@
+<% viagems.forEach(function(viagem){ %>
+	<ul>
+		<li>Name: <%= viagem.name %></li>
+		<li>Phone: <%= viagem.phone %></li>
+		<li>Check-in: <%= viagem.dateFrom.toDateString() %></li>
+		<li>Check-out: <%= viagem.dateTo.toDateString() %></li>
+		<li>Origin: <%= viagem.origin %></li>
+		<li>Destination: <%= viagem.destination %></li>
+		<li>Travelers: <%= viagem.people %></li>
+	</ul>
+<% }); %>

@@ -5,14 +5,12 @@ var mongoose = require("mongoose");
 var Viagem = require("./models/viagem");
 
 //const host = 'localhost';
-//const port = 3000;
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 
 mongoose.Promise = global.Promise;
-
-
 //mongoose.connect("mongodb://localhost:27017/travelA", {
-mongoose.connect("mongodb+srv://lhgoulart:864162@cluster0.skcjt.mongodb.net/viagems", {
+mongoose.connect("mongodb+srv://lhgoulart:LvxPwuvx1KZwTgzm@cluster0.skcjt.mongodb.net/viagems", {
+	useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
   }).then(() => console.log('Database connection successful'),
@@ -39,9 +37,19 @@ app.post("/success", function(req, res){
 	 		console.log(err);
 	 	}else{
 	 		res.render('success.ejs',{ viagem: viagem });
-	 		console.log(viagem);
+	 		//console.log(viagem);
 	 	}
 	 });
+});
+
+app.get("/data", function(req, res){
+	Viagem.find({}, function(err, viagems) { 
+	    if (err) {
+	    	console.log(err);
+	    } else {
+	        res.render('data.ejs',{ viagems: viagems});
+	    }
+	});
 });
 
 app.listen(port, () => {
