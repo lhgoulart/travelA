@@ -1,0 +1,33 @@
+<%- include("partials/header") %>
+
+<div class="container">
+	
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-8 success">
+			<div class="row">
+				<div class="col-12 msg">Your trip has been successfully registered!</div>
+				<div class="col-12 info">
+					<ul>
+						<li>Name: <%= viagem.name %></li>
+						<li>Phone: <%= viagem.phone %></li>
+						<li>Check-in: <%= viagem.dateFrom.toDateString() %></li>
+						<li>Check-out: <%= viagem.dateTo.toDateString() %></li>
+						<li>Origin: <%= viagem.origin %></li>
+						<li>Destination: <%= viagem.destination %></li>
+						<li>Travelers: <%= viagem.people %></li>
+					</ul>
+				</div>
+				<div class="col-12 info">
+					<a href="/" class="btn btn-primary">Return</a>
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+
+
+</div>
+
+<%- include("partials/footer") %>
