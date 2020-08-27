@@ -5,17 +5,14 @@ var mongoose = require("mongoose");
 var Viagem = require("./models/viagem");
 
 const host = 'localhost';
-const port = 3000;
+//const port = 3000;
+const port = port = process.env.PORT || 80;
 
 mongoose.Promise = global.Promise;
 
 
 //mongoose.connect("mongodb://localhost:27017/travelA", {
-
 mongoose.connect("mongodb+srv://lhgoulart:864162@cluster0.skcjt.mongodb.net/viagems", {
-	
-//mongoose.connect("mongodb://lhgoulart:864162hfB%21@cluster0-skcjt.mongodb.net/travelA?retryWrites=true&w=majority", {
-    useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
   }).then(() => console.log('Database connection successful'),
