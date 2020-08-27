@@ -4,9 +4,9 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var Viagem = require("./models/viagem");
 
-const host = 'localhost';
+//const host = 'localhost';
 //const port = 3000;
-const = port = process.env.PORT || 80;
+const port = process.env.PORT || 80;
 
 mongoose.Promise = global.Promise;
 
@@ -45,5 +45,5 @@ app.post("/success", function(req, res){
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://${host}:${port}/`);
+  //console.log(`Server running at http://${host}:${port}/`);
 });
