@@ -6,7 +6,7 @@ var Viagem = require("./models/viagem");
 
 const host = 'localhost';
 //const port = 3000;
-const port = port = process.env.PORT || 80;
+const = port = process.env.PORT || 80;
 
 mongoose.Promise = global.Promise;
 
