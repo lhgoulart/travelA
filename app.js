@@ -44,6 +44,6 @@ app.post("/success", function(req, res){
 	 });
 });
 
-app.listen(port, host, () => {
+app.listen(port, () => {
   console.log(`Server running at http://${host}:${port}/`);
 });
